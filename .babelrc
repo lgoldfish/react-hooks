@@ -4,6 +4,9 @@
         ["@babel/preset-react"]
     ],
     "plugins": [
-        "@babel/plugin-transform-runtime", ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+        "@babel/plugin-transform-runtime", ["import",
+            { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }
+        ],
+        "styled-jsx/babel"
     ]
 }

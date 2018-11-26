@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import Component1 from '../components/Component1';
-
-class IndexPage extends Component {
+import Highlight from 'react-highlight';
+import ReadMe from '../../README.md';
+export default class IndexPage extends Component {
   constructor(props) {
     super();
   }
 
   render() {
     return (
-      <div>
-IndexPage
-        <div><Component1 /></div>
-      </div>
+      <div style={{width:'60%',margin:'0 auto ',height:'100%'}}>
+        <Highlight innerHTML>
+            {ReadMe}
+        </Highlight>         
+     </div>
     );
   }
 }
-export default IndexPage;

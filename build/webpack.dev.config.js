@@ -16,7 +16,8 @@ module.exports = webpackMerge(base, {
         host: 'localhost',
         port: 8080,
         open:true,
-        inline:true
+        inline:true,
+        historyApiFallback: true
     },
     module: {
         rules: [

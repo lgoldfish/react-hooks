@@ -1,14 +1,6 @@
-@import "~reset.css";
-body {
-    color: rebeccapurple;
-    font-size: 30px;
-    font-weight: 700;
-}
+/* @import "~reset.css"; */
 
-div {
-    display: flex;
-}
-
-.sfsfsfsfs {
-    color: rebeccapurple;
+@import '~highlight.js/styles/default.css';
+#app {
+    height: 100%
 }

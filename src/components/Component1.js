@@ -30,5 +30,5 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps)(Component1);
 Component1.propTypes = {
-  show: PropTypes.object.isRequired,
+  show: PropTypes.bool.isRequired,
 };
