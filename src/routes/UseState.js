@@ -9,26 +9,30 @@ const asyncFn = () => new Promise((resolve) => {
 const UseState = () => {
   console.log(1);
   const [count, setCount] = useState(0);
+  const handleClickCount = () => {
+    setCount(count + 1);
+  };
   console.log(2);
   const [list, setList] = useState([]);
   const [object, setObject] = useState({ name: 'lishishi', age: 28 });
   console.log(3);
   useEffect(() => {
     console.log(4);
+    console.log('count is', count);
+    handleClickCount();
+    console.log('count2 is', count);
     document.title = ` 你点了我 ${count} 次 `;
-  });
+  }, []);
   console.log(5);
-  const handleClickCount = () => {
-    console.log(6);
-    setCount(count + 1);
-  };
-  console.log(7);
+
+  console.log(6);
   const [asyncCount, setAsyncCount] = useState(() => {
     const initialState = 6;
     return initialState;
   });
   return (
     <div className="hook1">
+      <h1>UseState</h1>
          点了我 <h1 style={{ display: 'inline-block' }}>{ count }</h1> 次！
       <Button type="primary" onClick={handleClickCount}>Count</Button>
       <Button onClick={_ => setCount(preCount => preCount + 1)}> + </Button>

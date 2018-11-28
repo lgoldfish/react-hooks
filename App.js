@@ -17,6 +17,8 @@ export default ({ children }) => (
         <Menu.Item key="1"><Link to="/">README</Link></Menu.Item>
         <Menu.Item key="2"><Link to="/usestate">USESTATE</Link></Menu.Item>
         <Menu.Item key="3"><Link to="/useeffect">USEEFFECT</Link></Menu.Item>
+        <Menu.Item key="4"><Link to="/usecontext">UseContext</Link></Menu.Item>
+        <Menu.Item key="5"><Link to="/customhook">CustomHook</Link></Menu.Item>
       </Menu>
     </Header>
     <Content style={{ background: '#fff' }}>{children}</Content>

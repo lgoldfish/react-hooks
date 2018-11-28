@@ -7,6 +7,8 @@ import NoMatch from './routes/NoMatch';
 import IndexPage from './routes/IndexPage';
 import UseState from './routes/UseState';
 import UseEffect from './routes/UseEffect';
+import UseContext from './routes/UseContext';
+import CustomHook from './routes/CustomHook';
 import ClassCompotent from './routes/ClassCompotent';
 
 const Routes = () => (
@@ -16,6 +18,8 @@ const Routes = () => (
         <Route exact path="/" component={IndexPage} />
         <Route path="/usestate" component={UseState} />
         <Route path="/useeffect" component={UseEffect} />
+        <Route path="/usecontext" component={UseContext} />
+        <Route path="/customhook" component={CustomHook} />
         <Route path="/class" component={ClassCompotent} />
         <Route component={NoMatch} />
       </Switch>
