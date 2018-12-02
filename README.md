@@ -192,3 +192,5 @@ It runs after the render is committed to the screen i.e. after Layout and Paint 
  - 目前react-hot-loader不能和hooks一起使用
 
 ## [Mixin => HOC => Render Prop => hooks](https://segmentfault.com/a/1190000016876476?utm_source=tag-newest)
+## [React-hooks API介绍](https://www.jianshu.com/p/7e6062fbe40d)
+## [github](https://github.com/lgoldfish/react-hooks)
