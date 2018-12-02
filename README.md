@@ -107,8 +107,6 @@
 
 ```
 
-- 如果存在多个useState和useEffect时，必须按顺序书写，定义一个useState后，紧接着就使用一个useEffect函数。
-
 - useEffect函数必须位于函数组件的最高一级
 
 ```
@@ -123,6 +121,13 @@ useEffect(updateTitle)
 
 ## Reducer Hook
 >>> 相当于组件自带的 redux reducer，负责接收 dispatch 分发的 action 并更新 state
+##  [配合hooks重新实现react-redux](https://npm.taobao.org/package/react-hooks-redux)
+>>> useReducer + useContext 钩子上进行一层很简单的封装以达到和以往 react-redux \ redux-thunk \ redux-logger 类似的功能
+
+```
+    npm install react-hooks-redux
+
+```
 
 ## React.memo() React 16.6.0 
 - PureComponent 要依靠 class 才能使用。而 React.memo() 可以和 functional component 一起使用
@@ -144,5 +149,46 @@ useEffect(updateTitle)
     ));
 
  ```
- # 注意
+ ## useRef 
+ ## useCallBack
+ >>> -  e.g. shouldComponentUpdate ; This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders
+ 
+ ```
+ const memoizedCallback = useCallback(
+  () => {
+    doSomething(a, b);
+  },
+  [a, b],
+);
+
+ ```
+ ## useMemo 
+
+- useMemo will only recompute the memoized value when one of the inputs has changed
+- useCallback(fn, inputs) is equivalent to useMemo(() => fn, inputs)
+
+```
+ const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+```
+
+## useImperativeMethods
+
+- useImperativeMethods customizes the instance value that is exposed to parent components when using ref
+- useImperativeMethods(ref, createInstance, [inputs])
+
+## useMutationEffect  useLayoutEffect useEffect 差别
+>>> 
+- useMutationEffect
+It fires synchronously before Layout phase i.e. during the same phase that React performs its DOM mutations. Use it to perform blocking custom DOM mutations without taking any DOM measurement/reading layout.
+
+- useLayoutEffect
+It fires synchronously after all DOM mutations but before Paint phase. Use this to read layout(styles or layout information) from the DOM and then perform blocking custom DOM mutations based on layout.
+
+- useEffect
+It runs after the render is committed to the screen i.e. after Layout and Paint phase. Use this whenever possible to avoid blocking visual updates
+ 
+# 注意
  - 目前react-hot-loader不能和hooks一起使用
+
+## [Mixin => HOC => Render Prop => hooks](https://segmentfault.com/a/1190000016876476?utm_source=tag-newest)

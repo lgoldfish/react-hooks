@@ -1,15 +1,16 @@
-const devModule = require ('./build/webpack.dev.config');
-const proModule = require ('./build//webpack.pro.config');
+const devModule = require('./build/webpack.dev.config');
+const proModule = require('./build//webpack.pro.config');
+
 let finalModule = {};
-let ENV = process.env.NODE_ENV;
+const ENV = process.env.NODE_ENV;
 switch (ENV) {
-    case 'dev':
+  case 'dev':
     finalModule = devModule;
     break;
-    case 'prod':
+  case 'prod':
     finalModule = proModule;
     break;
-    default:
+  default:
     break;
 }
 module.exports = finalModule;
