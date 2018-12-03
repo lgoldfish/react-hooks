@@ -4,7 +4,7 @@ import React, {
 import * as good from 'react';
 import { Button } from 'antd';
 
-console.log('googd', good);
+// console.log('googd', good);
 
 export default () => {
   const [count, setCount] = useState(0);

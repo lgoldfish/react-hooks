@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const { Fragment } = React;
-console.log('Fragment', Fragment);
+// console.log('Fragment', Fragment);
 class Father extends Component {
   constructor(props) {
     super();

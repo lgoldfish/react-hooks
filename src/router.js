@@ -20,8 +20,6 @@ import ClassCompotent from './routes/ClassCompotent';
 import HOC from './routes/HOC';
 import RenderProps from './routes/RenderProps';
 
-console.log('RenderProps', RenderProps);
-
 const Routes = () => (
   <Router history={history}>
     <App>

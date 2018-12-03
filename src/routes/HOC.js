@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const Usual = (props) => {
-  console.log('props in Usual', props);
+//   console.log('props in Usual', props);
+  console.log('');
   return (
     <div>
             Usual
@@ -10,7 +11,8 @@ const Usual = (props) => {
 };
 
 const SimpleHoc = (WrappedComponent) => {
-  console.log('simpleHoc', WrappedComponent);
+//   console.log('simpleHoc', WrappedComponent);
+  console.log('', '');
   return () => (
     <div>
       <h1>WrappedComponent</h1>
