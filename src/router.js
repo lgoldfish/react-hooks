@@ -17,6 +17,10 @@ import UseMemo from './routes/UseMemo';
 import UseImperativeMethods from './routes/UseImperativeMethods';
 import UseLayoutEffect from './routes/UseLayoutEffect';
 import ClassCompotent from './routes/ClassCompotent';
+import HOC from './routes/HOC';
+import RenderProps from './routes/RenderProps';
+
+console.log('RenderProps', RenderProps);
 
 const Routes = () => (
   <Router history={history}>
@@ -35,6 +39,8 @@ const Routes = () => (
         <Route path="/usememo" component={UseMemo} />
         <Route path="/useImperativeMethods" component={UseImperativeMethods} />
         <Route path="/UseLayoutEffect" component={UseLayoutEffect} />
+        <Route path="/hoc" component={HOC} />
+        <Route path="/renderprops" component={RenderProps} />
         <Route component={NoMatch} />
       </Switch>
     </App>
